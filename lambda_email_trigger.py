@@ -3,7 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 # Replace the sender@example.com with the "From" address emails should come from.  Must be verified by AWS SES
-SENDER = "my_email_address@example.com"
+SENDER = "fdgarciacruz@aggies.ncat.edu"
 
 # Replace the AWS_REGION with the region you've deployed SES to
 AWS_REGION = "us-east-1"
@@ -22,22 +22,32 @@ def lambda_handler(event, context):
         email = event['email']
         
         # Create a "subject" variable which will be the subject line of the welcome email
-        subject = "FILL IN THIS SECTION WITH THE CONTENT YOU WANT IN THE SUBJECT LINE OF YOUR WELCOME EMAIL"
+        subject = "Welcome to Amazon Prime Student!"
         
         # Create the HTML string that will populate the "body" of the email
         body_html = """
             <html>
                 <head></head>
                 <body>
-                    FILL IN THIS SECTION WITH THE CONTENT YOU WANT IN THE BODY OF YOUR WELCOME EMAIL
+                    Welcome to your Amazon Prime Student account. There are multiple plans and packages that are at your needs and wants as a college student.
+                    You have access to Amazon closet to choose clothes that best suites any occassion wherever you are studying, Amazon Hygiene to best maintain
+                    your physical and mental health in balance, Amazon College Essentials to be able to purchase the best materials you will need for class or studying,
+                    and Amazon Late Nights to be stocked on snacks and meals to help avoid going days without eating. You will have access to many
+                    Amazon platform shows and deals that are in the best interest for your finances and help ensure your Amazon Prime Student account
+                    serves you at the best it can be. We hope you enjoy your plan and let us know if there are any changes that can
+                    better service your needs. Please enjoy.
+                    
+                    Thank You,
+                    The Amazon Prime Team
                 </body>
             </html>
         """
 
         # Backup string in case the email client doesn't support HTML for emails (unlikely)
         body_text = """
-            If your email client doesn't support HTML (unlikely) the body of your welcome email needs to be a simple
-            text string.  You can think of this as a "backup" in case you can't send the HTML version of your welcome email
+            Welcome to your Amazon Prime Student account.
+            There are multiple plans and packages that are at your needs and wants as a college student.
+            Please enjoy.
         """
 
         # Send the email using the send_email() function and note the response
