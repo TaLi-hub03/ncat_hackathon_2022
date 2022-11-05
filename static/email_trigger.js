@@ -1,7 +1,7 @@
 // Function to send email notification when the sign-up form is submitted
 function submitToAPI(e) {
     e.preventDefault();
-    var API_URL = "FILL IN WITH THE URL PROVIDED BY API GATEWAY";
+    var API_URL = "https://hroi05yadf.execute-api.us-east-1.amazonaws.com/emailstage";
 
     // Retrieve the email address and passwords from your form here.  As an example, in our sign up form we're
     // using the HTML "name" element to refer to the email, password, and password-confirm fields in the form
@@ -12,7 +12,7 @@ function submitToAPI(e) {
     // Perform any form validation you'd like in this section.  What should happen if a user provides an email without a domain?
     // (e.g. abc123 instead of abc123@example.com).  What if the provided passwords don't match?  Should there be any restrictions
     // around passwords to provide more security for the customer?
-
+   
     // Set the data to pass to the API.  Feel free to change this section as needed
     var data = {
         email: email,
