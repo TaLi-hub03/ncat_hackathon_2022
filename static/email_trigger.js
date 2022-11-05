@@ -1,7 +1,7 @@
 // Function to send email notification when the sign-up form is submitted
 function submitToAPI(e) {
     e.preventDefault();
-    var API_URL = "https://hroi05yadf.execute-api.us-east-1.amazonaws.com/emailstage";
+    var API_URL = "https://hroi05yadf.execute-api.us-east-1.amazonaws.com/Beta/emailtrigger";
 
     // Retrieve the email address and passwords from your form here.  As an example, in our sign up form we're
     // using the HTML "name" element to refer to the email, password, and password-confirm fields in the form
@@ -29,7 +29,7 @@ function submitToAPI(e) {
         },
         error: function() {
            
-            $('#signup-form')[0].reset();
+            //$('#signup-form')[0].reset();
         }
     });
 } 
