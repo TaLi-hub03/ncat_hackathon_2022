@@ -25,7 +25,7 @@ function submitToAPI(e) {
         data: JSON.stringify(data),
         success: function() {
             
-            $('#signup-form')[0].reset();
+            //$('#signup-form')[0].reset();
         },
         error: function() {
            
