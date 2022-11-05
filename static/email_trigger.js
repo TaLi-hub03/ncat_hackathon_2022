@@ -29,15 +29,11 @@ function submitToAPI(e) {
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(data),
         success: function() {
-            // Can you think of anything you'd want to do to notify a customer that they've been sent a welcome email?
-        
-            // Clear the form data after submission
+            
             $('#signup-form')[0].reset();
         },
         error: function() {
-            // Can you think of anything you'd want to do to notify the customer that we (Amazon) failed to send them a welcome email?
-            
-            // Clear the form data after submission
+           
             $('#signup-form')[0].reset();
         }
     });
