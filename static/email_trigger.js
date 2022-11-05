@@ -8,12 +8,7 @@ function submitToAPI(e) {
     var email = $('input[name="email"]').val();
     var password = $('input[name="password"]').val();
     var confirm_password =$('input[name="confirm_password"]').val();
-
-    // Perform any form validation you'd like in this section.  What should happen if a user provides an email without a domain?
-    // (e.g. abc123 instead of abc123@example.com).  What if the provided passwords don't match?  Should there be any restrictions
-    // around passwords to provide more security for the customer?
-   
-    // Set the data to pass to the API.  Feel free to change this section as needed
+    
     var data = {
         email: email,
         password: password,
